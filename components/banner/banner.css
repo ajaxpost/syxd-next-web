@@ -1,0 +1,12 @@
+@keyframes speed {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.speedspan {
+  animation: speed 5s linear forwards;
+}
