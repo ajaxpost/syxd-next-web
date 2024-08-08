@@ -1,3 +1,4 @@
+import Footer from '@/components/footer';
 import Header from '@/components/header';
 
 export default function Template({
@@ -9,6 +10,7 @@ export default function Template({
     <>
       <Header />
       {children}
+      <Footer />
     </>
   );
 }
