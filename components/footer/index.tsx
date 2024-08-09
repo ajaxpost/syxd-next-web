@@ -31,8 +31,6 @@ export default function Footer() {
             </Link>
             <span>© 2024 盛易信达</span>
           </div>
-          {/* nav */}
-          <nav></nav>
         </div>
       </div>
     </footer>

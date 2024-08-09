@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { ModeToggle } from '../theme/mode-toggle';
 
 export default function Header() {
   return (
@@ -29,7 +30,7 @@ export default function Header() {
               </svg>
             </Link>
           </div>
-          <div>2</div>
+          <ModeToggle />
         </nav>
       </header>
       <div className="max-md:h-[50px]"></div>

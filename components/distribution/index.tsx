@@ -20,14 +20,14 @@ export default function Distribution() {
             <span className="bg-blue-50 text-[#2468f2] border-blue-200 rounded-xl inline-block px-2 py-0.5 leading-tight text-xs lg:text-sm font-medium border">
               Data for leads, contacts, and accounts
             </span>
-            <h3 className="mt-4 text-[#262626] text-2xl font-bold leading-[32px] max-md:text-lg max-md:leading-8">
+            <h3 className="mt-4 text-foreground text-2xl font-bold leading-[32px] max-md:text-lg max-md:leading-8">
               Enrich your data with company details
             </h3>
-            <p className="mt-4 text-[#595959] text-lg leading-[28px] max-md:text-sm max-md:leading-6">
+            <p className="mt-4 text-muted-foreground text-lg leading-[28px] max-md:text-sm max-md:leading-6">
               Clearbits APIs provide you with the data you need to close more
               deals, faster.
             </p>
-            <p className="mt-4 text-[#595959] text-lg leading-[28px] max-md:text-sm max-md:leading-6">
+            <p className="mt-4 text-muted-foreground text-lg leading-[28px] max-md:text-sm max-md:leading-6">
               Starting with the most precise data sources, we then incorporate
               all other available sources to offer you the optimal combination
               of accuracy and coverage.
@@ -52,14 +52,14 @@ export default function Distribution() {
             <span className="bg-blue-50 text-[#2468f2] border-blue-200 rounded-xl inline-block px-2 py-0.5 leading-tight text-xs lg:text-sm font-medium border">
               Data for leads, contacts, and accounts
             </span>
-            <h3 className="mt-4 text-[#262626] text-2xl font-bold leading-[32px] max-md:text-lg max-md:leading-8">
+            <h3 className="mt-4 text-foreground text-2xl font-bold leading-[32px] max-md:text-lg max-md:leading-8">
               Enrich your data with company details
             </h3>
-            <p className="mt-4 text-[#595959] text-lg leading-[28px] max-md:text-sm max-md:leading-6">
+            <p className="mt-4 text-muted-foreground text-lg leading-[28px] max-md:text-sm max-md:leading-6">
               Clearbits APIs provide you with the data you need to close more
               deals, faster.
             </p>
-            <p className="mt-4 text-[#595959] text-lg leading-[28px] max-md:text-sm max-md:leading-6">
+            <p className="mt-4 text-muted-foreground text-lg leading-[28px] max-md:text-sm max-md:leading-6">
               Starting with the most precise data sources, we then incorporate
               all other available sources to offer you the optimal combination
               of accuracy and coverage.
