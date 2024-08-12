@@ -1,0 +1,140 @@
+.m-line {
+  background-color: transparent;
+}
+
+.m-line span:nth-child(1) {
+  animation: nav-menu-line-first-inverse 0.5s ease-out forwards;
+}
+.m-line span:nth-child(2) {
+  animation: nav-menu-line-inverse 0.5s ease-out forwards;
+}
+.m-line span:nth-child(3) {
+  animation: nav-menu-line-last-inverse 0.5s ease-out forwards;
+}
+
+.m-line-active {
+  background-color: transparent;
+}
+
+.m-line-active span:nth-child(1) {
+  animation: nav-menu-line-first 0.5s ease-out forwards;
+}
+
+.m-line-active span:nth-child(2) {
+  animation: nav-menu-line 0.5s ease-out forwards;
+}
+
+.m-line-active span:nth-child(3) {
+  animation: nav-menu-line-last 0.5s ease-out forwards;
+}
+
+@keyframes nav-menu-line-first {
+  0% {
+    top: calc(50% - 7px);
+    transform: rotate(0) scaleY(70%);
+  }
+  60% {
+    top: calc(50% - 1px);
+    transform: rotate(0) scaleY(70%);
+  }
+  75% {
+    top: calc(50% - 1px);
+    transform: rotate(68deg) scaleY(70%);
+  }
+  100% {
+    top: calc(50% - 1px);
+    transform: rotate(135deg) scaleY(70%);
+  }
+}
+
+@keyframes nav-menu-line {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes nav-menu-line-last {
+  0% {
+    bottom: calc(50% - 7px);
+    transform: rotate(0) scaleY(70%);
+  }
+  60% {
+    bottom: calc(50% - 1px);
+    transform: rotate(0) scaleY(70%);
+  }
+  100% {
+    bottom: calc(50% - 1px);
+    transform: rotate(45deg) scaleY(70%);
+  }
+}
+
+@keyframes nav-menu-line-first-inverse {
+  0% {
+    top: calc(50% - 1px);
+    transform: rotate(135deg) scaleY(70%);
+  }
+  20% {
+    top: calc(50% - 1px);
+    transform: rotate(68deg) scaleY(70%);
+  }
+  40% {
+    top: calc(50% - 1px);
+    transform: rotate(0) scaleY(70%);
+  }
+  54% {
+    top: calc(50% - 1px);
+    transform: rotate(0) scaleY(70%);
+  }
+  100% {
+    top: calc(50% - 7px);
+    transform: rotate(0) scaleY(70%);
+  }
+}
+
+@keyframes nav-menu-line-inverse {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes nav-menu-line-last-inverse {
+  0% {
+    bottom: calc(50% - 1px);
+    transform: rotate(45deg) scaleY(70%);
+  }
+  40% {
+    bottom: calc(50% - 1px);
+    transform: rotate(0) scaleY(70%);
+  }
+  54% {
+    bottom: calc(50% - 1px);
+    transform: rotate(0) scaleY(70%);
+  }
+  100% {
+    bottom: calc(50% - 7px);
+    transform: rotate(0) scaleY(70%);
+  }
+}
+
+.m-line-black::after {
+  content: '';
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 5px;
+  background-image: url('https://cloudcache.tencent-cloud.com/qcloud/portal/kit/images/slice/icon-link.9615d540.svg');
+}

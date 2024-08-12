@@ -1,12 +1,13 @@
 import Link from 'next/link';
 import { ModeToggle } from '../theme/mode-toggle';
+import MLine from './m-line';
 
 export default function Header() {
   return (
     <>
       <header className=" fixed left-0 top-0 flex flex-col items-start justify-around w-full z-[1001] bg-background px-6 h-[70px] max-md:h-[50px] border-b">
         <nav className="w-full flex items-center flex-1">
-          <div className="flex-1 flex">
+          <div className=" flex">
             <Link href="/" className="flex-none">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -30,7 +31,24 @@ export default function Header() {
               </svg>
             </Link>
           </div>
-          <ModeToggle />
+          <div className="ml-auto mr-6 max-md:hidden">
+            <Link
+              href="http://101.201.63.227:8082/sign_in"
+              className=" hover:underline mr-5"
+              target="_blank"
+            >
+              登录
+            </Link>
+            <Link
+              href="http://101.201.63.227:8082/"
+              className="hover:underline"
+              target="_blank"
+            >
+              控制台
+            </Link>
+          </div>
+          <ModeToggle className="max-md:hidden" />
+          <MLine />
         </nav>
       </header>
       <div className="max-md:h-[50px]"></div>
