@@ -136,5 +136,17 @@
   transform: translateY(-50%);
   width: 12px;
   height: 5px;
-  background-image: url('https://cloudcache.tencent-cloud.com/qcloud/portal/kit/images/slice/icon-link.9615d540.svg');
+  background-image: url('/icon-link.svg');
+}
+.nav-menu-item {
+  position: relative;
+  height: 100%;
+}
+.nav-menu-item::after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  content: '';
+  height: 2px;
+  width: 100%;
 }

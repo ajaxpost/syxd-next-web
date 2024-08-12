@@ -4,8 +4,7 @@ export const config = [
     desc: '告警,监控,日志,性能优化,安全防护,全面升级',
     btnText: '了解详情',
     btnHref: '#',
-    video:
-      'https://bce.bdstatic.com/p3m/common-service/uploads/qiand_a53a42d.mp4',
+    video: '/video/b1.mp4',
     image: '/banner1.png',
   },
   {

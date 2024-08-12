@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12px" height="5px" viewBox="0 0 12 5" version="1.1"><script xmlns=""/>
+    <title>右箭头</title>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="导航移动端" transform="translate(-87.000000, -576.000000)" fill="#9BA6B7" fill-rule="nonzero">
+            <g id="右箭头" transform="translate(87.000000, 576.000000)">
+                <polygon id="路径" points="0 3 8 3 8 0 12 5 0 5"/>
+            </g>
+        </g>
+    </g>
+<script xmlns=""/></svg>

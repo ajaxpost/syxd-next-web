@@ -26,6 +26,21 @@ export default function Home() {
       <section className=" relative overflow-hidden">
         <div className="pt-20 text-center">
           <h3 className="leading-[44px] text-[32px] max-md:leading-8 max-md:text-lg text-foreground font-bold">
+            安全、稳定、可信赖的产品与服务
+          </h3>
+        </div>
+        <p className="mt-[10px] text-center leading-9 text-lg max-md:leading-[22px] max-md:text-sm max-md:mt-2 text-muted-foreground">
+          技术最佳实践，助力产业互联！
+        </p>
+        <div className="s-w px-4 max-md:px-8 relative ">
+          <div className=" h-[500px] border leading-[500px] text-center font-semibold text-6xl">
+            TODO
+          </div>
+        </div>
+      </section>
+      <section className=" relative overflow-hidden">
+        <div className="pt-20 text-center">
+          <h3 className="leading-[44px] text-[32px] max-md:leading-8 max-md:text-lg text-foreground font-bold">
             左右布局
           </h3>
         </div>

@@ -1,13 +1,17 @@
 import Link from 'next/link';
 import { ModeToggle } from '../theme/mode-toggle';
 import MLine from './m-line';
+import './header.css';
+import { navMenu } from './config';
+import { cn } from '@/lib/utils';
+import Nav from './nav';
 
 export default function Header() {
   return (
     <>
       <header className=" fixed left-0 top-0 flex flex-col items-start justify-around w-full z-[1001] bg-background px-6 h-[70px] max-md:h-[50px] border-b">
         <nav className="w-full flex items-center flex-1">
-          <div className=" flex">
+          <div className=" flex items-center h-full">
             <Link href="/" className="flex-none">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -30,6 +34,8 @@ export default function Header() {
                 <path d="m16.62 12-5.74 9.94" />
               </svg>
             </Link>
+            {/* nav menu */}
+            <Nav />
           </div>
           <div className="ml-auto mr-6 max-md:hidden">
             <Link
