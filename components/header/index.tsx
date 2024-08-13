@@ -1,12 +1,27 @@
+'use server';
 import Link from 'next/link';
+import { cookies } from 'next/headers';
 import { ModeToggle } from '../theme/mode-toggle';
 import MLine from './m-line';
-import './header.css';
-import { navMenu } from './config';
-import { cn } from '@/lib/utils';
 import Nav from './nav';
+import './header.css';
+import { userInfoProps } from './data';
+import UserInfo from './user-info';
 
-export default function Header() {
+const url = process.env.NEXT_PUBLIC_CONSOLE_URL;
+const baseUrl = process.env.NEXT_PUBLIC_REQUEST_URL;
+export default async function Header() {
+  const cookieStore = cookies();
+  const token = cookieStore.get('token');
+  const result = await fetch(baseUrl + '/bg-ry/getInfo', {
+    method: 'GET',
+    headers: {
+      Authorization: 'Bearer ' + token?.value,
+    },
+    cache: 'no-cache',
+  });
+  const userInfo: userInfoProps = await result.json();
+
   return (
     <>
       <header className=" fixed left-0 top-0 flex flex-col items-start justify-around w-full z-[1001] bg-background px-6 h-[70px] max-md:h-[50px] border-b">
@@ -37,24 +52,17 @@ export default function Header() {
             {/* nav menu */}
             <Nav />
           </div>
-          <div className="ml-auto mr-6 max-md:hidden">
-            <Link
-              href="http://101.201.63.227:8082/sign_in"
-              className=" hover:underline mr-5"
-              target="_blank"
-            >
-              登录
-            </Link>
-            <Link
-              href="http://101.201.63.227:8082/"
-              className="hover:underline"
-              target="_blank"
-            >
-              控制台
-            </Link>
+          <div className="ml-auto h-full mr-6 max-md:hidden flex items-center gap-5">
+            {userInfo.user && (
+              <Link href={url + '/'} className="hover:underline">
+                控制台
+              </Link>
+            )}
+            <UserInfo userInfo={userInfo} />
           </div>
           <ModeToggle className="max-md:hidden" />
-          <MLine />
+          <div className=" ml-auto items-center max-md:flex hidden "></div>
+          <MLine userInfo={userInfo} />
         </nav>
       </header>
       <div className="max-md:h-[50px]"></div>
