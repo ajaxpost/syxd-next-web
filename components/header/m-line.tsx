@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
 import './header.css';
 import Link from 'next/link';
@@ -10,24 +10,32 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from '@/components/ui/tooltip';
-import { userInfoProps } from './data';
+import { NavConfigProps, userInfoProps } from './data';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import cookies from 'js-cookie';
 import { toast } from 'sonner';
+import { Plus, X } from 'lucide-react';
+import { nav_conig } from './config';
 
 const url = process.env.NEXT_PUBLIC_CONSOLE_URL;
 
 export default function MLine({ userInfo }: { userInfo: userInfoProps }) {
   const [open, setOpen] = useState(false);
   const [type, setType] = useState<'nav' | 'user'>('nav');
+  const [selectedKeys, setSelectedKeys] = useState<string[]>([]);
   const { setTheme } = useTheme();
+
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }, [open]);
 
   const handlerClick = (t: typeof type) => {
     if (!open) {
-      document.body.style.overflow = 'hidden';
       setType(t);
-    } else {
-      document.body.style.overflow = 'auto';
     }
     setOpen(!open);
   };
@@ -45,6 +53,14 @@ export default function MLine({ userInfo }: { userInfo: userInfoProps }) {
       window.location.href = url + '/sign_in';
     } else {
       toast.error(data.msg || '登出失败,请重试');
+    }
+  };
+
+  const subClick = (item: NavConfigProps) => {
+    if (selectedKeys.includes(item.label)) {
+      setSelectedKeys(selectedKeys.filter((key) => key !== item.label));
+    } else {
+      setSelectedKeys([...selectedKeys, item.label]);
     }
   };
 
@@ -101,13 +117,52 @@ export default function MLine({ userInfo }: { userInfo: userInfoProps }) {
         {type === 'nav' ? (
           <div className="pt-6 px-8 pb-[96px] my-0 mx-auto max-w-[288px]">
             <nav className="flex flex-col gap-5">
-              <Link
-                href="/news"
-                className=" py-2 border-b hover:text-[#4780f4] hover:border-[#4780f4] "
-              >
-                {/* m-line-black */}
-                <span className="relative ">最新动态</span>
-              </Link>
+              {nav_conig.map((item) => {
+                if (item.children) {
+                  const enable = selectedKeys.includes(item.label);
+                  return (
+                    <div
+                      key={item.label}
+                      className={cn('border-b overflow-hidden', {
+                        'h-[48px]': !enable,
+                        'h-auto pb-[10px]': enable,
+                      })}
+                    >
+                      <button
+                        onClick={() => subClick(item)}
+                        className="flex justify-between items-center pt-3 pr-1 pb-[11px] w-full leading-6 text-sm font-medium text-foreground cursor-pointer"
+                      >
+                        <span>{item.label}</span>
+                        {enable ? <X size={14} /> : <Plus size={14} />}
+                      </button>
+                      <div className="">
+                        {item.children.map((item) => {
+                          return (
+                            <div key={item.path}>
+                              <Link
+                                href={item.path!}
+                                className="block hover:text-[#2468f2] ml-3 leading-8 text-sm font-normal text-foreground"
+                              >
+                                {item.label}
+                              </Link>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  );
+                }
+                return (
+                  <Link
+                    key={item.path}
+                    href={item.path!}
+                    className=" py-2 border-b hover:text-[#4780f4] hover:border-[#4780f4] "
+                  >
+                    {/* m-line-black */}
+                    <span className="relative m-line-black ">{item.label}</span>
+                  </Link>
+                );
+              })}
             </nav>
             <div className="pt-10">
               <h3 className="mb-2 text-sm leading-[22px]">主题切换</h3>

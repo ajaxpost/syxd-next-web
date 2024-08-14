@@ -4,9 +4,10 @@ import { cookies } from 'next/headers';
 import { ModeToggle } from '../theme/mode-toggle';
 import MLine from './m-line';
 import Nav from './nav';
-import './header.css';
+import Image from 'next/image';
 import { userInfoProps } from './data';
 import UserInfo from './user-info';
+import './header.css';
 
 const url = process.env.NEXT_PUBLIC_CONSOLE_URL;
 const baseUrl = process.env.NEXT_PUBLIC_REQUEST_URL;
@@ -24,30 +25,23 @@ export default async function Header() {
 
   return (
     <>
-      <header className=" fixed left-0 top-0 flex flex-col items-start justify-around w-full z-[1001] bg-background px-6 h-[70px] max-md:h-[50px] border-b">
+      <header
+        className=" fixed left-0 top-0 flex flex-col items-start justify-around w-full z-[1001] bg-background px-6 h-[70px] max-md:h-[50px] border-b"
+        style={{
+          boxShadow: '0 2px 10px 0 rgba(0,0,0,.06)',
+        }}
+      >
         <nav className="w-full flex items-center flex-1">
           <div className=" flex items-center h-full">
-            <Link href="/" className="flex-none">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="w-10 h-10"
-              >
-                <circle cx="12" cy="12" r="10" />
-                <path d="m14.31 8 5.74 9.94" />
-                <path d="M9.69 8h11.48" />
-                <path d="m7.38 12 5.74-9.94" />
-                <path d="M9.69 16 3.95 6.06" />
-                <path d="M14.31 16H2.83" />
-                <path d="m16.62 12-5.74 9.94" />
-              </svg>
+            <Link href="/" className="h-full flex items-center">
+              <Image
+                src="/logo.png"
+                alt="logo"
+                quality={100}
+                width={300}
+                height={44}
+                className="max-md:w-[150px]"
+              />
             </Link>
             {/* nav menu */}
             <Nav />

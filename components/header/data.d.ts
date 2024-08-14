@@ -56,3 +56,9 @@ export interface userInfoProps {
     admin: boolean;
   };
 }
+
+export interface NavConfigProps {
+  label: string;
+  path?: string;
+  children?: NavConfigProps[];
+}

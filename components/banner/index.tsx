@@ -109,7 +109,7 @@ export default function Banner() {
           })}
         </div>
       </div>
-      <div className="md:absolute bottom-0 left-0 z-30 bg-background  w-full  border-y">
+      <div className="md:absolute bottom-0 left-0 z-30 dark:bg-background bg-[hsla(0,0%,100%,.6)]  w-full  border-y">
         <div className="s-w w-full grid grid-cols-4 max-md:grid-cols-2 ">
           <Link
             href="#"

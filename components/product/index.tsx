@@ -1,9 +1,8 @@
-'use server';
 import Link from 'next/link';
 import { Badge } from '@/components/ui/badge';
 import './product.css';
 
-export default async function Product() {
+export default function Product() {
   return (
     <section className=" relative overflow-hidden">
       <div className="pb-20  bg-background">

@@ -14,12 +14,9 @@ export default function Nav() {
           onMouseEnter={() => setType('product')}
           onMouseLeave={() => setType(undefined)}
         >
-          <Link
-            href="#"
-            className=" h-full inline-block text-[16px] max-md:text-[14px] max-md:leading-[50px] leading-[70px] "
-          >
+          <span className=" cursor-default h-full inline-block text-[16px] max-md:text-[14px] max-md:leading-[50px] leading-[70px] ">
             产品
-          </Link>
+          </span>
           <div
             className={cn(
               ' absolute top-full left-0 transition-all origin-top-left',
@@ -61,6 +58,30 @@ export default function Nav() {
               </div>
             </div>
           </div>
+        </div>
+        <div className=" nav-menu-item px-4 hover:after:bg-foreground hover:text-[#2468f2] dark:hover:text-foreground">
+          <Link
+            href="/case"
+            className=" h-full inline-block text-[16px] max-md:text-[14px] max-md:leading-[50px] leading-[70px] "
+          >
+            客户案例
+          </Link>
+        </div>
+        <div className=" nav-menu-item px-4 hover:after:bg-foreground hover:text-[#2468f2] dark:hover:text-foreground">
+          <Link
+            href="/about"
+            className=" h-full inline-block text-[16px] max-md:text-[14px] max-md:leading-[50px] leading-[70px] "
+          >
+            关于我们
+          </Link>
+        </div>
+        <div className=" nav-menu-item px-4 hover:after:bg-foreground hover:text-[#2468f2] dark:hover:text-foreground">
+          <Link
+            href="/blog"
+            className=" h-full inline-block text-[16px] max-md:text-[14px] max-md:leading-[50px] leading-[70px] "
+          >
+            最新动态
+          </Link>
         </div>
       </div>
     </>

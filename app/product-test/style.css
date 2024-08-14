@@ -1,0 +1,61 @@
+.banner {
+  background-image: url('https://qcloudimg.tencent-cloud.cn/trisys/assets/product/images/iIRz3lRglgEcOf5N5FEBd.jpg');
+  background-size: auto 650px;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+.banner-wrap::before {
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 424px;
+  pointer-events: none;
+  right: 50%;
+  margin-right: 536px;
+  background-image: linear-gradient(
+    270deg,
+    rgba(245, 247, 249, 0) 0,
+    #f1f3f4 50%
+  );
+}
+
+.banner-wrap::after {
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 424px;
+  pointer-events: none;
+  left: 50%;
+  margin-left: 536px;
+  background-image: linear-gradient(
+    90deg,
+    rgba(245, 247, 249, 0) 0,
+    #f1f3f4 50%
+  );
+}
+
+@media (max-width: 768px) {
+  .banner {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    height: 100%;
+    width: 500px;
+    background-size: auto 553px;
+    background-position: 84% -30px;
+  }
+  .banner-wrap::before {
+    width: 200px;
+    margin-right: 184px;
+  }
+  .banner-wrap::after {
+    width: 200px;
+    margin-left: 184px;
+  }
+}
