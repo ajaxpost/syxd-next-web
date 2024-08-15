@@ -29,7 +29,7 @@ export default function Nav() {
             <div className="py-6 px-8 h-[250px] w-[500px] max-w-[700px] flex gap-5 bg-background border shadow-sm ">
               <div className="pt-5 flex-1">
                 <h2 className="text-base font-medium pb-3 border-b text-foreground">
-                  组件管理平台
+                  产品大标题
                 </h2>
                 <p className="pt-5 text-muted-foreground text-sm leading-[22px]">
                   集成开箱即用的云原生底座和低码组件开发能力，支持组件生命周期管理
@@ -67,20 +67,29 @@ export default function Nav() {
             客户案例
           </Link>
         </div>
-        <div className=" nav-menu-item px-4 hover:after:bg-foreground hover:text-[#2468f2] dark:hover:text-foreground">
-          <Link
-            href="/about"
-            className=" h-full inline-block text-[16px] max-md:text-[14px] max-md:leading-[50px] leading-[70px] "
-          >
-            关于我们
-          </Link>
-        </div>
+
         <div className=" nav-menu-item px-4 hover:after:bg-foreground hover:text-[#2468f2] dark:hover:text-foreground">
           <Link
             href="/blog"
             className=" h-full inline-block text-[16px] max-md:text-[14px] max-md:leading-[50px] leading-[70px] "
           >
             最新动态
+          </Link>
+        </div>
+        <div className=" nav-menu-item px-4 hover:after:bg-foreground hover:text-[#2468f2] dark:hover:text-foreground">
+          <Link
+            href="/hornor"
+            className=" h-full inline-block text-[16px] max-md:text-[14px] max-md:leading-[50px] leading-[70px] "
+          >
+            资质荣誉
+          </Link>
+        </div>
+        <div className=" nav-menu-item px-4 hover:after:bg-foreground hover:text-[#2468f2] dark:hover:text-foreground">
+          <Link
+            href="/about"
+            className=" h-full inline-block text-[16px] max-md:text-[14px] max-md:leading-[50px] leading-[70px] "
+          >
+            关于我们
           </Link>
         </div>
       </div>

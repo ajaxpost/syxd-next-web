@@ -60,5 +60,6 @@ export interface userInfoProps {
 export interface NavConfigProps {
   label: string;
   path?: string;
+  target?: string;
   children?: NavConfigProps[];
 }

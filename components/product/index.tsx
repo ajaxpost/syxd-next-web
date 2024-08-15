@@ -8,11 +8,12 @@ export default function Product() {
       <div className="pb-20  bg-background">
         <div className="pt-20 text-center">
           <h3 className="leading-[44px] text-[32px] max-md:leading-8 max-md:text-lg text-foreground font-bold">
-            关于监控
+            大标题题
           </h3>
         </div>
         <p className="mt-[10px] mb-7 text-center leading-9 text-lg max-md:leading-[22px] max-md:text-sm max-md:mt-2 text-muted-foreground">
-          从监控到告警，我们提供全方位的监控服务，让您的业务安全可靠。
+          从监控到告警，我们提供全方位的监控服务，让您的业务安全可靠。（描述
+          desc）
         </p>
         <div className="s-w px-4 max-md:px-8 relative ">
           <div className="grid max-md:flex flex-col grid-cols-4 max-xl:grid-cols-2 gap-5">

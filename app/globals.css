@@ -86,10 +86,16 @@
     overflow-x: auto;
     min-width: 1240px;
   }
+  header {
+    min-width: 1240px;
+  }
 }
 
 @media (max-width: 768px) {
   body {
+    min-width: 320px;
+  }
+  header {
     min-width: 320px;
   }
 }

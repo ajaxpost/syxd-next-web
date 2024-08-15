@@ -16,13 +16,14 @@ export default function Page() {
           <div className="max-w-[1200px] pb-[30px] mx-auto pt-[62px] max-md:pt-[320px] h-full relative z-10">
             <div className="mb-3 flex items-center max-md:justify-center">
               <h1 className="text-[40px] leading-[52px] max-md:text-2xl  font-medium text-[#000] whitespace-nowrap overflow-hidden text-ellipsis">
-                <span>云服务器</span>
+                <span>大标题</span>
               </h1>
             </div>
             <p className="text-base leading-7 w-[60%] dark:text-[rgba(0,0,0,0.7)] max-md:hidden">
               云服务器（Cloud Virtual Machine，CVM）提供安全可靠的弹性计算服务。
               您可以实时扩展或缩减计算资源，适应变化的业务需求，并只需按实际使用的资源计费。使用
-              CVM 可以极大降低您的软硬件采购成本，简化 IT 运维工作。
+              CVM 可以极大降低您的软硬件采购成本，简化 IT 运维工作。（描述
+              desc）
             </p>
             <p className="max-md:block hidden text-center dark:text-[rgba(0,0,0,0.7)] text-sm leading-6">
               云服务器（Cloud Virtual
@@ -424,7 +425,7 @@ export default function Page() {
                   虚拟机+容器混合架构
                 </div>
                 <p className="text-left leading-[30px] text-muted-foreground group-hover:text-white text-sm md:min-h-[250px]">
-                  企业部分业务需要部署在对隔离性要求较高虚拟机上，而部分业务需要部署在更灵活的容器中，这种场景下，企业用户迫切的需要对这两种架构实现统一的管理与服务的互联互通，时速云容器云平台可以实现对容器+虚拟机的统一管理与资源调度，帮助用户快速实现虚拟机+容器的混合部署，避免两套体系人力重叠与浪费。
+                  企业部分业务需要部署在对隔离性要求较高虚拟机上，而部分业务需要部署在更灵活的容器中，这种场景下，企业用户迫切的需要对这两种架构实现统一的管理与服务的互联互通，xxx容器云平台可以实现对容器+虚拟机的统一管理与资源调度，帮助用户快速实现虚拟机+容器的混合部署，避免两套体系人力重叠与浪费。
                 </p>
               </div>
             </div>
@@ -451,7 +452,7 @@ export default function Page() {
                   虚拟机+容器混合架构
                 </div>
                 <p className="text-left leading-[30px] text-muted-foreground group-hover:text-white text-sm md:min-h-[250px]">
-                  企业部分业务需要部署在对隔离性要求较高虚拟机上，而部分业务需要部署在更灵活的容器中，这种场景下，企业用户迫切的需要对这两种架构实现统一的管理与服务的互联互通，时速云容器云平台可以实现对容器+虚拟机的统一管理与资源调度，帮助用户快速实现虚拟机+容器的混合部署，避免两套体系人力重叠与浪费。
+                  企业部分业务需要部署在对隔离性要求较高虚拟机上，而部分业务需要部署在更灵活的容器中，这种场景下，企业用户迫切的需要对这两种架构实现统一的管理与服务的互联互通，xxx容器云平台可以实现对容器+虚拟机的统一管理与资源调度，帮助用户快速实现虚拟机+容器的混合部署，避免两套体系人力重叠与浪费。
                 </p>
               </div>
             </div>
@@ -478,7 +479,7 @@ export default function Page() {
                   虚拟机+容器混合架构
                 </div>
                 <p className="text-left leading-[30px] text-muted-foreground group-hover:text-white text-sm md:min-h-[250px]">
-                  企业部分业务需要部署在对隔离性要求较高虚拟机上，而部分业务需要部署在更灵活的容器中，这种场景下，企业用户迫切的需要对这两种架构实现统一的管理与服务的互联互通，时速云容器云平台可以实现对容器+虚拟机的统一管理与资源调度，帮助用户快速实现虚拟机+容器的混合部署，避免两套体系人力重叠与浪费。
+                  企业部分业务需要部署在对隔离性要求较高虚拟机上，而部分业务需要部署在更灵活的容器中，这种场景下，企业用户迫切的需要对这两种架构实现统一的管理与服务的互联互通，xxx容器云平台可以实现对容器+虚拟机的统一管理与资源调度，帮助用户快速实现虚拟机+容器的混合部署，避免两套体系人力重叠与浪费。
                 </p>
               </div>
             </div>

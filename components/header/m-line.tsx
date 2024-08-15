@@ -138,9 +138,9 @@ export default function MLine({ userInfo }: { userInfo: userInfoProps }) {
                       <div className="">
                         {item.children.map((item) => {
                           return (
-                            <div key={item.path}>
+                            <div key={item.label}>
                               <Link
-                                href={item.path!}
+                                href={item.path || '#'}
                                 className="block hover:text-[#2468f2] ml-3 leading-8 text-sm font-normal text-foreground"
                               >
                                 {item.label}
@@ -156,10 +156,16 @@ export default function MLine({ userInfo }: { userInfo: userInfoProps }) {
                   <Link
                     key={item.path}
                     href={item.path!}
+                    target={item.target || '_self'}
                     className=" py-2 border-b hover:text-[#4780f4] hover:border-[#4780f4] "
                   >
-                    {/* m-line-black */}
-                    <span className="relative m-line-black ">{item.label}</span>
+                    <span
+                      className={cn('relative', {
+                        'm-line-black': item.target === '_blank',
+                      })}
+                    >
+                      {item.label}
+                    </span>
                   </Link>
                 );
               })}

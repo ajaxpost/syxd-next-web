@@ -24,33 +24,32 @@ export default function Page() {
               </h1>
             </div>
             <p className="text-base text-[rgba(255,255,255,0.85)] mt-4 leading-7 max-md:text-sm max-md:leading-6 text-center">
-              时速云是一家专业的云原生应用及数据平台服务提供商，秉持“让计算产生价值，让数据成为资产”
-              的使命，致力于帮助客户实现数字化转型。
+              在这里，我们将分享最新的行业动态、技术趋势和公司新闻。无论您是开发者、技术爱好者，还是希望了解更多行业资讯的读者，都可以在这里找到有价值的信息。我们致力于为您提供最新、最全面的内容，帮助您在快速变化的技术世界中保持领先。
             </p>
           </div>
         </div>
       </section>
-      <section className=" relative overflow-hidden py-[60px] px-[40px]">
+      <section className=" relative overflow-hidden py-[60px] px-[40px] max-md:px-[5%]">
         <div className="min-h-[400px] max-w-[1200px] mx-auto overflow-hidden ">
-          <div className="mx-6 flex">
+          <div className="flex">
             {/* news list */}
             <ul className="flex-1">
               <li className="pb-[30px] border-b mb-[30px]">
-                <div className="flex items-start justify-start">
+                <div className="flex items-start justify-start max-md:flex-col">
                   {/* image */}
-                  <div className="max-w-[160px]">
+                  <div className="md:max-w-[190px] max-md:mb-4">
                     <Image
-                      src="https://blog.tenxcloud.com/wp-content/uploads/2024/06/%E5%A4%B4%E5%9B%BE-1.jpg"
+                      src="/blog-1.jpg"
                       alt="img"
-                      width={160}
+                      width={220}
                       height={120}
                       className="w-auto h-auto"
                     />
                   </div>
                   {/* content */}
-                  <div className="ml-6">
+                  <div className="md:ml-6">
                     <h2 className="mb-3 text-[24px] leading-[32px] font-medium">
-                      打造更全面安全体验，时速云与小佑科技完成产品兼容互认证
+                      探索前沿技术，TechX与InnovateLab达成战略合作
                     </h2>
                     <div className="mb-3 text-[#999] text-sm leading-[22px] font-medium">
                       <span className="text-[#3782E7]">
@@ -62,9 +61,7 @@ export default function Page() {
                       </time>
                     </div>
                     <p className="text-sm leading-[22px] text-muted-foreground mb-2">
-                      日前，时速云旗下云原生应用平台（TCAP）产品与小佑科技镜界云原生安全检测平台完成产品兼容性互认证，产品运行稳定，性能优异。除产品层面适配认证外，双方还将就重点行业领域展开深度合作，共同推动云原生行业生态建设、发展。
-                      产品兼容性互认证证书
-                      时速云与小佑科技同为中国信通院云原生安全实验室首批成员单位，双方在云原生安全标准…
+                      近日，TechX与InnovateLab宣布达成战略合作，双方将在人工智能和大数据领域展开深度合作。此次合作旨在通过技术创新推动行业发展，提升企业竞争力。双方将共同开发新产品，并在多个行业应用场景中进行测试和推广，力求为客户提供更优质的解决方案...
                     </p>
                     <Link
                       href="#"
@@ -76,21 +73,21 @@ export default function Page() {
                 </div>
               </li>
               <li className="pb-[30px] border-b mb-[30px]">
-                <div className="flex items-start justify-start">
+                <div className="flex items-start justify-start max-md:flex-col">
                   {/* image */}
-                  <div className="max-w-[160px]">
+                  <div className="md:max-w-[190px] max-md:mb-4">
                     <Image
-                      src="https://blog.tenxcloud.com/wp-content/uploads/2024/06/%E5%A4%B4%E5%9B%BE-1.jpg"
+                      src="/blog-1.jpg"
                       alt="img"
-                      width={160}
+                      width={220}
                       height={120}
                       className="w-auto h-auto"
                     />
                   </div>
                   {/* content */}
-                  <div className="ml-6">
+                  <div className="md:ml-6">
                     <h2 className="mb-3 text-[24px] leading-[32px] font-medium">
-                      打造更全面安全体验，时速云与小佑科技完成产品兼容互认证
+                      探索前沿技术，TechX与InnovateLab达成战略合作
                     </h2>
                     <div className="mb-3 text-[#999] text-sm leading-[22px] font-medium">
                       <span className="text-[#3782E7]">
@@ -102,9 +99,7 @@ export default function Page() {
                       </time>
                     </div>
                     <p className="text-sm leading-[22px] text-muted-foreground mb-2">
-                      日前，时速云旗下云原生应用平台（TCAP）产品与小佑科技镜界云原生安全检测平台完成产品兼容性互认证，产品运行稳定，性能优异。除产品层面适配认证外，双方还将就重点行业领域展开深度合作，共同推动云原生行业生态建设、发展。
-                      产品兼容性互认证证书
-                      时速云与小佑科技同为中国信通院云原生安全实验室首批成员单位，双方在云原生安全标准…
+                      近日，TechX与InnovateLab宣布达成战略合作，双方将在人工智能和大数据领域展开深度合作。此次合作旨在通过技术创新推动行业发展，提升企业竞争力。双方将共同开发新产品，并在多个行业应用场景中进行测试和推广，力求为客户提供更优质的解决方案...
                     </p>
                     <Link
                       href="#"
@@ -117,7 +112,7 @@ export default function Page() {
               </li>
             </ul>
             {/* actions */}
-            <div className="ml-7 p-6 basis-[350px] min-w-[350px] flex-shrink-0 dark:bg-background bg-[#fafafa]">
+            <div className="ml-7 max-md:hidden p-6 basis-[350px] min-w-[350px] flex-shrink-0 dark:bg-background bg-[#fafafa]">
               <div className=" relative mb-6">
                 <Input autoFocus className="pr-[60px]" />
                 <Link
@@ -185,7 +180,7 @@ export default function Page() {
                     href="#"
                     className="py-[5px] hover:text-[#234ae5] text-base leading-[24px] text-muted-foreground block"
                   >
-                    打造更全面安全体验，时速云与小佑科技完成产品兼容互认证
+                    探索前沿技术，TechX与InnovateLab达成战略合作
                   </Link>
                 </li>
                 <li className="border-b py-2">
@@ -193,7 +188,7 @@ export default function Page() {
                     href="#"
                     className="py-[5px] hover:text-[#234ae5] text-base leading-[24px] text-muted-foreground block"
                   >
-                    打造更全面安全体验，时速云与小佑科技完成产品兼容互认证
+                    探索前沿技术，TechX与InnovateLab达成战略合作
                   </Link>
                 </li>
                 <li className="border-b py-2">
@@ -201,7 +196,7 @@ export default function Page() {
                     href="#"
                     className="py-[5px] hover:text-[#234ae5] text-base leading-[24px] text-muted-foreground block"
                   >
-                    打造更全面安全体验，时速云与小佑科技完成产品兼容互认证
+                    探索前沿技术，TechX与InnovateLab达成战略合作
                   </Link>
                 </li>
                 <li className="border-b py-2">
@@ -209,7 +204,7 @@ export default function Page() {
                     href="#"
                     className="py-[5px] hover:text-[#234ae5] text-base leading-[24px] text-muted-foreground block"
                   >
-                    打造更全面安全体验，时速云与小佑科技完成产品兼容互认证
+                    探索前沿技术，TechX与InnovateLab达成战略合作
                   </Link>
                 </li>
                 <li className="border-b py-2">
@@ -217,7 +212,7 @@ export default function Page() {
                     href="#"
                     className="py-[5px] hover:text-[#234ae5] text-base leading-[24px] text-muted-foreground block"
                   >
-                    打造更全面安全体验，时速云与小佑科技完成产品兼容互认证
+                    探索前沿技术，TechX与InnovateLab达成战略合作
                   </Link>
                 </li>
               </ul>
