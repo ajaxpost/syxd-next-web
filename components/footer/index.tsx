@@ -12,7 +12,7 @@ import { FootNavConfig } from './config';
 export default function Footer() {
   return (
     <footer className="max-md:py-[10px] py-[40px] min-h-[350px]">
-      <div className="flex relative px-6 max-md:hidden">
+      <div className=" s-w flex relative px-6 max-md:hidden">
         {/* logo */}
         <div className=" basis-[340px] flex-shrink-0">
           <Link href="/" className="flex items-center justify-center">

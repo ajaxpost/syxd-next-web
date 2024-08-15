@@ -1,6 +1,14 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import type { Metadata } from 'next';
 import './style.css';
+
+export const metadata: Metadata = {
+  // title: '产品列表',
+  // title: {
+  //   absolute: '产品列表',
+  // },
+};
 
 export default function Page() {
   return (

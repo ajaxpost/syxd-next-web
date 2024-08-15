@@ -56,7 +56,11 @@ export default function Banner() {
                     muted
                     autoPlay
                     src={item.video}
-                  ></video>
+                    preload="auto"
+                    playsInline
+                  >
+                    Your browser does not support the video tag.
+                  </video>
                 )}
 
                 <Image

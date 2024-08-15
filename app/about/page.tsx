@@ -9,7 +9,7 @@ export default function Page() {
     <>
       <div className="md:h-[70px]"></div>
       <section className=" relative overflow-hidden">
-        <div className="relative  max-md:h-auto max-md:bg-[#e0e6e8]">
+        <div className="relative  max-md:h-auto flex justify-center">
           <Image
             src="/banner-about.jpg"
             alt="img"
