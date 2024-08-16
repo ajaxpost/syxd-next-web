@@ -7,7 +7,7 @@ export default function Distribution() {
       <div className="flex max-md:block justify-between items-start gap-5 relative">
         <div className="w-1/2 max-md:w-full">
           <Image
-            src="https://clearbit.com/images/homepage/step-1.png"
+            src="/step-1.png"
             alt="image"
             width={596}
             height={652}
@@ -39,7 +39,7 @@ export default function Distribution() {
       <div className="flex max-md:block flex-row-reverse justify-between items-start gap-5 relative">
         <div className="w-1/2 max-md:w-full">
           <Image
-            src="https://clearbit.com/images/homepage/step-1.png"
+            src="/step-1.png"
             alt="image"
             width={596}
             height={652}
