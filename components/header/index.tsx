@@ -11,6 +11,7 @@ import './header.css';
 
 const url = process.env.NEXT_PUBLIC_CONSOLE_URL;
 const baseUrl = process.env.NEXT_PUBLIC_REQUEST_URL;
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH;
 export default async function Header() {
   const cookieStore = cookies();
   const token = cookieStore.get('token');
@@ -36,7 +37,7 @@ export default async function Header() {
           <div className=" flex items-center h-full">
             <Link href="/" className="h-full flex items-center">
               <Image
-                src="/logo.png"
+                src={basePath + '/logo.png'}
                 alt="logo"
                 quality={100}
                 width={300}
@@ -44,7 +45,7 @@ export default async function Header() {
                 className="dark:hidden max-md:max-w-[150px]"
               />
               <Image
-                src="/logo2.png"
+                src={basePath + '/logo2.png'}
                 alt="logo"
                 quality={100}
                 width={300}

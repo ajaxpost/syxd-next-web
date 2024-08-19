@@ -1,5 +1,6 @@
 import Image from 'next/image';
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH;
 export default function Distribution() {
   return (
     <div className="s-w px-4 max-md:px-8 ">
@@ -7,7 +8,7 @@ export default function Distribution() {
       <div className="flex max-md:block justify-between items-start gap-5 relative">
         <div className="w-1/2 max-md:w-full">
           <Image
-            src="/step-1.png"
+            src={basePath + '/step-1.png'}
             alt="image"
             width={596}
             height={652}
@@ -39,7 +40,7 @@ export default function Distribution() {
       <div className="flex max-md:block flex-row-reverse justify-between items-start gap-5 relative">
         <div className="w-1/2 max-md:w-full">
           <Image
-            src="/step-1.png"
+            src={basePath + '/step-1.png'}
             alt="image"
             width={596}
             height={652}

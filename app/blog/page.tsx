@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { Input } from '@/components/ui/input';
 import './style.css';
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH;
 export default function Page() {
   return (
     <>
@@ -14,7 +15,12 @@ export default function Page() {
         <div className="min-h-[400px] flex justify-center items-center relative  max-md:h-auto max-md:bg-[#e0e6e8]">
           {/* bg-wrap */}
           <div className="absolute top-0 left-0 w-full h-full overflow-hidden ">
-            <div className="absolute top-0 left-0 w-full h-full overflow-hidden blog-banner"></div>
+            <div
+              className="absolute top-0 left-0 w-full h-full overflow-hidden blog-banner"
+              style={{
+                backgroundImage: `url(${basePath}/blog-banner.png)`,
+              }}
+            ></div>
           </div>
           {/* inner */}
           <div className="max-w-[1200px] pb-[30px] mx-auto h-full relative z-10">
@@ -39,7 +45,7 @@ export default function Page() {
                   {/* image */}
                   <div className="md:max-w-[190px] max-md:mb-4">
                     <Image
-                      src="/blog-1.jpg"
+                      src={basePath + '/blog-1.jpg'}
                       alt="img"
                       width={220}
                       height={120}
@@ -77,7 +83,7 @@ export default function Page() {
                   {/* image */}
                   <div className="md:max-w-[190px] max-md:mb-4">
                     <Image
-                      src="/blog-1.jpg"
+                      src={basePath + '/blog-1.jpg'}
                       alt="img"
                       width={220}
                       height={120}

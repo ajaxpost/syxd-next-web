@@ -9,6 +9,7 @@ import {
 } from '@/components/ui/accordion';
 import { FootNavConfig } from './config';
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH;
 export default function Footer() {
   return (
     <footer className="max-md:py-[10px] py-[40px] min-h-[350px]">
@@ -17,7 +18,7 @@ export default function Footer() {
         <div className=" basis-[340px] flex-shrink-0">
           <Link href="/" className="flex items-center justify-center">
             <Image
-              src="/logo.png"
+              src={basePath + '/logo.png'}
               alt="logo"
               quality={100}
               width={300}
@@ -25,7 +26,7 @@ export default function Footer() {
               className="dark:hidden"
             />
             <Image
-              src="/logo2.png"
+              src={basePath + '/logo2.png'}
               alt="logo"
               quality={100}
               width={300}
@@ -39,7 +40,7 @@ export default function Footer() {
             </h2>
 
             <Image
-              src="/ewm1.png"
+              src={basePath + '/ewm1.png'}
               alt="公众号二维码"
               width={109}
               height={109}

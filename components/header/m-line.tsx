@@ -18,7 +18,7 @@ import { Plus, X } from 'lucide-react';
 import { nav_conig } from './config';
 
 const url = process.env.NEXT_PUBLIC_CONSOLE_URL;
-
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH;
 export default function MLine({ userInfo }: { userInfo: userInfoProps }) {
   const [open, setOpen] = useState(false);
   const [type, setType] = useState<'nav' | 'user'>('nav');
@@ -68,7 +68,7 @@ export default function MLine({ userInfo }: { userInfo: userInfoProps }) {
     <div className="ml-auto max-md:flex items-center hidden">
       {userInfo.user && (
         <Avatar onClick={() => handlerClick('user')}>
-          <AvatarImage src="/avatar.svg" />
+          <AvatarImage src={basePath + '/avatar.svg'} />
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
       )}

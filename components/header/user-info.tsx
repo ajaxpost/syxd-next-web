@@ -9,6 +9,7 @@ import cookies from 'js-cookie';
 import { toast } from 'sonner';
 
 const url = process.env.NEXT_PUBLIC_CONSOLE_URL;
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH;
 export default function UserInfo({ userInfo }: { userInfo: userInfoProps }) {
   const [open, setOpen] = useState(false);
 
@@ -37,7 +38,7 @@ export default function UserInfo({ userInfo }: { userInfo: userInfoProps }) {
           onMouseLeave={() => setOpen(false)}
         >
           <Avatar>
-            <AvatarImage src="/avatar.svg" />
+            <AvatarImage src={basePath + '/avatar.svg'} />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
           <div className="flex flex-col">

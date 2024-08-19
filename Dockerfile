@@ -1,4 +1,4 @@
-FROM registry.cn-hangzhou.aliyuncs.com/ax-image/node AS base
+FROM node:18.20.3-bullseye AS base
 
 # 安装依赖阶段
 FROM base AS deps
@@ -31,6 +31,7 @@ RUN \
 FROM base AS runner
 
 WORKDIR /app
+ENV NODE_ENV production
 
 COPY --from=builder /app/public ./public
 COPY --from=builder /app/.next/standalone ./
@@ -38,5 +39,7 @@ COPY --from=builder /app/.next/static ./.next/static
 
 # 暴露端口
 EXPOSE 3000
+
+ENV PORT=3000
 
 CMD node server.js

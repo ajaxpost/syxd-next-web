@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { Badge } from '@/components/ui/badge';
 import './style.css';
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH;
 export default function Page() {
   return (
     <>
@@ -14,7 +15,12 @@ export default function Page() {
         <div className="min-h-[400px] relative  max-md:h-auto max-md:bg-[#e0e6e8]">
           {/* bg-wrap */}
           <div className="absolute top-0 left-0 w-full h-full overflow-hidden banner-wrap">
-            <div className="absolute top-0 left-0 w-full h-full overflow-hidden banner"></div>
+            <div
+              className="absolute top-0 left-0 w-full h-full overflow-hidden banner"
+              style={{
+                backgroundImage: `url(${basePath}/iIRz3lRglgEcOf5N5FEBd.jpg)`,
+              }}
+            ></div>
           </div>
           {/* inner */}
           <div className="max-w-[1200px] pb-[30px] mx-auto pt-[122px] max-md:pt-[320px] h-full relative z-10">
@@ -72,11 +78,7 @@ export default function Page() {
                 <div className="border cursor-pointer overflow-hidden">
                   {/* img */}
                   <div className="w-full relative h-[250px] mb-6 overflow-hidden">
-                    <Image
-                      src="https://tenxcloud.com/assets/image/case/%E5%9B%BD%E5%AE%B6%E7%94%B5%E7%BD%91.png"
-                      alt="img"
-                      fill
-                    />
+                    <Image src={basePath + '/国家电网.png'} alt="img" fill />
                   </div>
                   {/* title */}
                   <h2 className="px-6 text-base font-bold mb-5">国家电网</h2>
@@ -99,11 +101,7 @@ export default function Page() {
                 <div className="border cursor-pointer overflow-hidden">
                   {/* img */}
                   <div className="w-full relative h-[250px] mb-6 overflow-hidden">
-                    <Image
-                      src="https://tenxcloud.com/assets/image/case/%E5%9B%BD%E5%AE%B6%E7%94%B5%E7%BD%91.png"
-                      alt="img"
-                      fill
-                    />
+                    <Image src={basePath + '/国家电网.png'} alt="img" fill />
                   </div>
                   {/* title */}
                   <h2 className="px-6 text-base font-bold mb-5">国家电网</h2>
@@ -126,11 +124,7 @@ export default function Page() {
                 <div className="border cursor-pointer overflow-hidden">
                   {/* img */}
                   <div className="w-full relative h-[250px] mb-6 overflow-hidden">
-                    <Image
-                      src="https://tenxcloud.com/assets/image/case/%E5%9B%BD%E5%AE%B6%E7%94%B5%E7%BD%91.png"
-                      alt="img"
-                      fill
-                    />
+                    <Image src={basePath + '/国家电网.png'} alt="img" fill />
                   </div>
                   {/* title */}
                   <h2 className="px-6 text-base font-bold mb-5">国家电网</h2>
@@ -158,7 +152,12 @@ export default function Page() {
             合作伙伴
           </h3>
           <div className="pt-6 overflow-hidden flex justify-center items-center">
-            <Image src="/hzhb.png" alt="合作伙伴" width={921} height={548} />
+            <Image
+              src={basePath + '/hzhb.png'}
+              alt="合作伙伴"
+              width={921}
+              height={548}
+            />
           </div>
         </div>
       </section>

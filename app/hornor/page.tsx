@@ -4,6 +4,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH;
 export default function Page() {
   return (
     <>
@@ -11,7 +12,7 @@ export default function Page() {
       <section className=" relative overflow-hidden">
         <div className="relative  max-md:h-auto flex justify-center">
           <Image
-            src="/banner-about.jpg"
+            src={basePath + '/banner-about.jpg'}
             alt="img"
             width={1000}
             height={345}
@@ -29,8 +30,18 @@ export default function Page() {
             资质证明
           </h3>
           <div className="pt-6 w-[80%] mx-auto">
-            <Image src="/zzzm.png" alt="资质证明" width={1291} height={626} />
-            <Image src="/zzzm2.png" alt="资质证明" width={1267} height={579} />
+            <Image
+              src={basePath + '/zzzm.png'}
+              alt="资质证明"
+              width={1291}
+              height={626}
+            />
+            <Image
+              src={basePath + '/zzzm2.png'}
+              alt="资质证明"
+              width={1267}
+              height={579}
+            />
           </div>
         </div>
       </section>

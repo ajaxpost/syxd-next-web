@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   //   absolute: '产品列表',
   // },
 };
-
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH;
 export default function Page() {
   return (
     <>
@@ -18,7 +18,12 @@ export default function Page() {
         <div className="min-h-[400px] relative  max-md:h-auto max-md:bg-[#e0e6e8]">
           {/* bg-wrap */}
           <div className="absolute top-0 left-0 w-full h-full overflow-hidden banner-wrap">
-            <div className="absolute top-0 left-0 w-full h-full overflow-hidden banner"></div>
+            <div
+              className="absolute top-0 left-0 w-full h-full overflow-hidden banner"
+              style={{
+                backgroundImage: `url(${basePath}/iIRz3lRglgEcOf5N5FEBd.jpg)`,
+              }}
+            ></div>
           </div>
           {/* inner */}
           <div className="max-w-[1200px] pb-[30px] mx-auto pt-[62px] max-md:pt-[320px] h-full relative z-10">
@@ -64,7 +69,7 @@ export default function Page() {
             <div className="p-4">
               <div className="  cursor-default p-6 text-center">
                 <Image
-                  src="https://www.tenxcloud.com/assets/svg/cloud-server/product-superiority01.svg"
+                  src={basePath + '/product-superiority01.svg'}
                   alt="product"
                   width={60}
                   height={60}
@@ -83,7 +88,7 @@ export default function Page() {
             <div className="p-4">
               <div className="  cursor-default p-6 text-center">
                 <Image
-                  src="https://www.tenxcloud.com/assets/svg/cloud-server/product-superiority01.svg"
+                  src={basePath + '/product-superiority01.svg'}
                   alt="product"
                   width={60}
                   height={60}
@@ -102,7 +107,7 @@ export default function Page() {
             <div className="p-4">
               <div className="  cursor-default p-6 text-center">
                 <Image
-                  src="https://www.tenxcloud.com/assets/svg/cloud-server/product-superiority01.svg"
+                  src={basePath + '/product-superiority01.svg'}
                   alt="product"
                   width={60}
                   height={60}
@@ -121,7 +126,7 @@ export default function Page() {
             <div className="p-4">
               <div className="  cursor-default p-6 text-center">
                 <Image
-                  src="https://www.tenxcloud.com/assets/svg/cloud-server/product-superiority01.svg"
+                  src={basePath + '/product-superiority01.svg'}
                   alt="product"
                   width={60}
                   height={60}
@@ -295,7 +300,7 @@ export default function Page() {
             <div className="py-5">
               <div className="md:pr-[30%] md:pb-[10%] flex items-start">
                 <Image
-                  src="https://www.tenxcloud.com/assets/svg/cloud-server/functional-characteristics01.svg"
+                  src={basePath + '/functional-characteristics01.svg'}
                   alt="img"
                   width={34}
                   height={34}
@@ -313,7 +318,7 @@ export default function Page() {
             <div className="py-5">
               <div className="md:pr-[30%] md:pb-[10%] flex items-start">
                 <Image
-                  src="https://www.tenxcloud.com/assets/svg/cloud-server/functional-characteristics01.svg"
+                  src={basePath + '/functional-characteristics01.svg'}
                   alt="img"
                   width={34}
                   height={34}
@@ -331,7 +336,7 @@ export default function Page() {
             <div className="py-5">
               <div className="md:pr-[30%] md:pb-[10%] flex items-start">
                 <Image
-                  src="https://www.tenxcloud.com/assets/svg/cloud-server/functional-characteristics01.svg"
+                  src={basePath + '/functional-characteristics01.svg'}
                   alt="img"
                   width={34}
                   height={34}
@@ -349,7 +354,7 @@ export default function Page() {
             <div className="py-5">
               <div className="md:pr-[30%] md:pb-[10%] flex items-start">
                 <Image
-                  src="https://www.tenxcloud.com/assets/svg/cloud-server/functional-characteristics01.svg"
+                  src={basePath + '/functional-characteristics01.svg'}
                   alt="img"
                   width={34}
                   height={34}
@@ -367,7 +372,7 @@ export default function Page() {
             <div className="py-5">
               <div className="md:pr-[30%] md:pb-[10%] flex items-start">
                 <Image
-                  src="https://www.tenxcloud.com/assets/svg/cloud-server/functional-characteristics01.svg"
+                  src={basePath + '/functional-characteristics01.svg'}
                   alt="img"
                   width={34}
                   height={34}
@@ -385,7 +390,7 @@ export default function Page() {
             <div className="py-5">
               <div className="md:pr-[30%] md:pb-[10%] flex items-start">
                 <Image
-                  src="https://www.tenxcloud.com/assets/svg/cloud-server/functional-characteristics01.svg"
+                  src={basePath + '/functional-characteristics01.svg'}
                   alt="img"
                   width={34}
                   height={34}
