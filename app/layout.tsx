@@ -3,6 +3,7 @@ import { Inter as FontSans } from 'next/font/google';
 import { cn } from '@/lib/utils';
 import { ThemeProvider } from '@/components/theme/theme-provider';
 import { Toaster } from '@/components/ui/sonner';
+import Script from 'next/script';
 import './globals.css';
 
 const fontSans = FontSans({
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
     '国内深耕行业的“智能触达”解决方案提供商，专注于toB、toG领域，拥有自主研发的核心AI知识产权，并具备增值电信业务经营许可资质，具有AI落地所必需的稳定通讯资源，集“AI+通讯”能力于一身。',
   keywords:
     '盛易信达,APM,微呼科技,语音机器人,智能语音,AI,TTS,NLS,NLP,NLU,ASR,IVR,客服机器人,智能客服,标即宝,号码标记,码号标记,企业品牌号,95服务号,特服号,语音短信,语音通知,短信服务,闪信,数字短信,富媒体短信,隐私中间号,音色,语音合成,自然语义,睿思,灵伴,小蜜薯,语音助手,增值电信业务,云呼叫中心,短信,视频彩信,语音识别,95码号,95,1069,106,呼叫中心,Callcenter',
-  metadataBase: new URL('http://101.201.63.227:8082/console'),
+  metadataBase: new URL('http://101.201.63.227:8082'),
   openGraph: {
     title: {
       template: '%s | 盛易信达',
@@ -61,6 +62,17 @@ export default async function RootLayout({
 }>) {
   return (
     <html suppressHydrationWarning>
+      <Script id="baidu-count">
+        {`
+          var _hmt = _hmt || [];
+          (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?8e7d8ed0430203a1bac1cf3f9d1430cd";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+          })();
+        `}
+      </Script>
       <body
         // antialiased 使得字体在支持 WebKit 的浏览器中显示得更加平滑。
         className={cn('bg-background font-sans antialiased', fontSans.variable)}

@@ -9,6 +9,7 @@ import { cn } from '@/lib/utils';
 import { config } from './config';
 import './banner.css';
 
+const docUrl = process.env.NEXT_PUBLIC_DOC_URL;
 export default function Banner() {
   const [frame, setFrame] = useState(0);
 
@@ -81,7 +82,7 @@ export default function Banner() {
                   <h2 className="p-0 font-semibold  text-[#222] text-[42px] leading-[42px] max-md:text-base max-md:leading-6">
                     {item.title}
                   </h2>
-                  <p className="text-[#595959] text-lg mt-7 max-md:hidden leading-[28px] overflow-hidden">
+                  <p className="text-[#595959] text-lg mt-7 max-md:hidden leading-[28px] overflow-hidden w-1/2">
                     {item.desc}
                   </p>
                   <span className="arr-white max-md:hidden inline-block align-middle cursor-pointer bg-[#2468f2] transition-colors hover:bg-[#528eff] rounded-sm text-base leading-[40px] text-white mt-8 w-[136px] h-[40px] font-semibold text-center">
@@ -140,7 +141,8 @@ export default function Banner() {
             </span>
           </Link>
           <Link
-            href="#"
+            href={docUrl || '#'}
+            target="_blank"
             className="h-16 flex group justify-between items-center px-10 arr-black"
           >
             <span className="text-lg group-hover:text-[#2468f2] font-semibold ">

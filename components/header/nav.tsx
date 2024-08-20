@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
+import { ChartSpline } from 'lucide-react';
 
 export default function Nav() {
   const [type, setType] = useState<'product' | undefined>(undefined);
@@ -26,16 +27,16 @@ export default function Nav() {
               }
             )}
           >
-            <div className="py-6 px-8 h-[250px] w-[500px] max-w-[700px] flex gap-5 bg-background border shadow-sm ">
-              <div className="pt-5 flex-1">
+            <div className="py-6 px-8 h-[250px] min-w-[700px] w-auto  flex gap-5 bg-background border shadow-sm ">
+              {/* <div className="pt-5 flex-1">
                 <h2 className="text-base font-medium pb-3 border-b text-foreground">
-                  产品大标题
+                  APM应用性能监控
                 </h2>
                 <p className="pt-5 text-muted-foreground text-sm leading-[22px]">
-                  集成开箱即用的云原生底座和低码组件开发能力，支持组件生命周期管理
+                  易扩展，开源兼容，高性价比的 APM 服务
                 </p>
                 <Link
-                  href="/product-test"
+                  href="/product/ap"
                   className="mt-2 inline-block relative pb-1 text-sm leading-[22px] text-[#244ae5] border-b border-[#244ae5]"
                 >
                   了解详情
@@ -55,6 +56,56 @@ export default function Nav() {
                 >
                   了解详情
                 </Link>
+              </div>
+               */}
+              <div className="flex w-full text-foreground">
+                <div className="flex-1">
+                  <h2 className="text-base text-[#2468f2] font-semibold leading-[22px] mb-[10px]">
+                    应用性能监控APM
+                  </h2>
+                  <ul>
+                    <li className="hover:text-[#2468f2] group">
+                      <Link
+                        href="/product/apm"
+                        className="flex justify-start items-start"
+                      >
+                        <ChartSpline className="mr-2 mt-1" size={16} />
+                        <div className="text-base font-medium leading-[22px]">
+                          <h3 className="mb-2">APM应用性能监控</h3>
+                          <span className="text-muted-foreground text-sm leading-[22px] group-hover:text-[#2468f2]">
+                            易扩展，开源兼容，高性价比的 APM 服务
+                          </span>
+                        </div>
+                      </Link>
+                    </li>
+                  </ul>
+                  <br />
+                  <h2 className="text-base text-[#2468f2] font-semibold leading-[22px] mb-[10px]">
+                    安全与信创
+                  </h2>
+                  <ul></ul>
+                </div>
+                <div className="flex-1">
+                  <h2 className="text-base text-[#2468f2] font-semibold leading-[22px] mb-[10px]">
+                    IT运维管理
+                  </h2>
+                  <ul>
+                    {/* <li className="hover:text-[#2468f2] group">
+                      <Link
+                        href="/product/apm"
+                        className="flex justify-start items-start"
+                      >
+                        <ChartSpline className="mr-2 mt-1" size={16} />
+                        <div className="text-base font-medium leading-[22px]">
+                          <h3 className="mb-2">APM应用性能监控</h3>
+                          <span className="text-muted-foreground text-sm leading-[22px] group-hover:text-[#2468f2]">
+                            易扩展，开源兼容，高性价比的 APM 服务
+                          </span>
+                        </div>
+                      </Link>
+                    </li> */}
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
