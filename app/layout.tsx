@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   },
   // @TODO 搜索引擎收录, 请根据实际情况修改
   verification: {
-    // google: 'google',
+    google: 'PpMzmgFKn5dFoUHs1wR80ermr1dGKojyh-vptxIZc7s',
     // yandex: 'yandex',
     // yahoo: 'yahoo',
     other: {
@@ -54,7 +54,6 @@ export const metadata: Metadata = {
     canonical: '.',
   },
 };
-
 export default async function RootLayout({
   children,
 }: Readonly<{

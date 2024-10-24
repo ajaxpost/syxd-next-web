@@ -8,12 +8,11 @@ export default function Product() {
       <div className="pb-20  bg-background">
         <div className="pt-20 text-center">
           <h3 className="leading-[44px] text-[32px] max-md:leading-8 max-md:text-lg text-foreground font-bold">
-            大标题题
+            一体化智能可观测平台
           </h3>
         </div>
         <p className="mt-[10px] mb-7 text-center leading-9 text-lg max-md:leading-[22px] max-md:text-sm max-md:mt-2 text-muted-foreground">
-          从监控到告警，我们提供全方位的监控服务，让您的业务安全可靠。（描述
-          desc）
+          集成APM、监控、告警、日志和中间件管理，全面掌握系统状态，确保高可用性和稳定性。
         </p>
         <div className="s-w px-4 max-md:px-8 relative ">
           <div className="grid max-md:flex flex-col grid-cols-4 max-xl:grid-cols-2 gap-5">
@@ -26,31 +25,28 @@ export default function Product() {
                 {/* 标题 */}
                 <h2 className="font-semibold text-lg text-foreground leading-[22px] mb-6">
                   <Link href="#" className="hover:underline">
-                    云主机
+                    应用性能监控
                   </Link>
                 </h2>
                 {/* tags */}
                 <div className="flex items-center gap-1 mb-6">
-                  <Badge variant="secondary">简化管理</Badge>
-                  <Badge variant="secondary">高性能</Badge>
-                  <Badge variant="secondary">弹性扩展</Badge>
+                  <Badge variant="default">性能监控</Badge>
+                  <Badge variant="default">故障排查</Badge>
+                  <Badge variant="default">实时分析</Badge>
                 </div>
                 {/* list */}
                 <ul className="flex flex-col gap-y-5 text-sm leading-[22px] font-medium pl-4">
-                  <li className=" relative">
-                    <span className=" absolute -left-[15px] top-2 w-[5px] h-[5px] bg-[#ddd] rounded-full"></span>
-                    <span>安全可靠,可弹性伸缩的云计算服务</span>
+                  <li className="relative">
+                    <span className="absolute -left-[15px] top-2 w-[5px] h-[5px] bg-[#ddd] rounded-full"></span>
+                    <span>实时监控应用性能，快速定位性能瓶颈</span>
                   </li>
-                  <li className=" relative">
-                    <span className=" absolute -left-[15px] top-2 w-[5px] h-[5px] bg-[#ddd] rounded-full"></span>
-                    <span>提供简单易用的虚拟机管理能力</span>
+                  <li className="relative">
+                    <span className="absolute -left-[15px] top-2 w-[5px] h-[5px] bg-[#ddd] rounded-full"></span>
+                    <span>提供详细的故障排查报告，帮助快速解决问题</span>
                   </li>
-
-                  <li className=" relative">
-                    <span className=" absolute -left-[15px] top-2 w-[5px] h-[5px] bg-[#ddd] rounded-full"></span>
-                    <span>
-                      快速实现企业硬件资源的虚拟化, 提高系统的硬件资源利用率
-                    </span>
+                  <li className="relative">
+                    <span className="absolute -left-[15px] top-2 w-[5px] h-[5px] bg-[#ddd] rounded-full"></span>
+                    <span>通过实时分析，优化系统性能和资源利用率</span>
                   </li>
                 </ul>
                 {/* btn */}
